@@ -1,5 +1,6 @@
 using FluentAssertions;
 using HelloDI.Console;
+using HelloDI.Tests.Fakes;
 using Xunit;
 
 namespace HelloDI.Tests
@@ -10,7 +11,7 @@ namespace HelloDI.Tests
         public void SayWillWriteCorrectMessageToMessageWriter()
         {
             // Arrange
-            var writer = new TestMessageWriter();
+            var writer = new TestSpyMessageWriter();
 
             var systemUnderTest = new Salutation(writer);
 
@@ -19,7 +20,6 @@ namespace HelloDI.Tests
             systemUnderTest.Say(message);
 
             // Assert
-            writer.MessageCount.Should().Be(1);
             writer.MessageWritten.Should().Be(message);
         }
     }
