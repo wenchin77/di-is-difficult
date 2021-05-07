@@ -1,4 +1,3 @@
-using System;
 namespace HelloDI.Console
 {
     public class ConsoleMessageWriter : IMessageWriter

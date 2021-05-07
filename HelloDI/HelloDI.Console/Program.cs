@@ -12,7 +12,10 @@
             var salutation = new Salutation(writer);
             salutation.Say("Hello DI!");
 
-            // TODO: 寫個新的 IMessageWriter 實作看看
+            // 用裝飾者模式寫個新的 IMessageWriter 實作看看
+            IMessageWriter secureWriter = new SecureMessageWriter(writer, "A");
+            var salutation1 = new Salutation(secureWriter);
+            salutation1.Say("Hello DI!!!!!");
         }
     }
 }
