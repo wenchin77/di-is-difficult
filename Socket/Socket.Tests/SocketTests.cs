@@ -5,7 +5,7 @@ using Xunit;
 
 namespace Socket.Tests
 {
-    public class SalutationTests
+    public class SocketTests
     {
         [Fact]
         public void SayWillWriteCorrectMessageToMessageWriter()
