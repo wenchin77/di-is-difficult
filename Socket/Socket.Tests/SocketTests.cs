@@ -8,7 +8,7 @@ namespace Socket.Tests
     public class SocketTests
     {
         [Fact]
-        public void SayWillWriteCorrectMessageToMessageWriter()
+        public void SendPowerPlugWillConnect()
         {
             // Arrange
             var plug = new TestSpyPlug();
